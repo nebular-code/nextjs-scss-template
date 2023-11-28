@@ -69,10 +69,10 @@ export default function Header() {
   const renderNavItems = (navItems: NavItem[]) => {
     return (
       <ul className="mainmenu">
-        {navItems.map((item) => {
+        {navItems.map((item, index) => {
           return (
             <li
-              key={item.title}
+              key={index}
               className={item.submenu ? "has-dropdown" : undefined}
             >
               <Link onClick={closeMobileMenu} href={item.href}>
@@ -86,9 +86,9 @@ export default function Header() {
 
               {item.submenu && (
                 <ul className="submenu" id={`${item.href}Submenu`}>
-                  {item.submenu.map((subItem) => {
+                  {item.submenu.map((subItem, index) => {
                     return (
-                      <li key={subItem.title}>
+                      <li key={index}>
                         <Link
                           onClick={() => {
                             toggleActive(`${item.href}Submenu`);
