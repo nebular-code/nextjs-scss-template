@@ -18,8 +18,8 @@ body {
 	line-height: $body-line-height;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: $body-font;
-	color: $body-color;
+	// font-family: $body-font;
+	// color: $body-color;
 	font-weight: 400;
 }
 
@@ -57,7 +57,7 @@ hr {
 
 // heading font, line height, color
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: $heading-font !important;
+	// font-family: $heading-font !important;
 	line-height: 1.4074;
 	color: $heading-color;
 }
@@ -131,7 +131,7 @@ a:hover,
 a:focus,
 a:active {
 	text-decoration: none;
-	outline: none;
+	outline: none !important;
 }
 a:visited {
 	color: inherit;

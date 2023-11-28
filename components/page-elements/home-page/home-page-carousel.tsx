@@ -7,17 +7,17 @@ import Carousel from "react-bootstrap/Carousel";
 export function HomePageCarousel() {
   const data = [
     {
-      image: "assets/images/background-1.png",
+      image: "https://images.unsplash.com/photo-1701077136756-3b8439292118?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       caption: "Caption",
       description: "Description Here",
     },
     {
-      image: "assets/images/background-1.png",
+      image: "https://images.unsplash.com/photo-1682686578842-00ba49b0a71a?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       caption: "Caption 2",
       description: "Description Here",
     },
     {
-      image: "assets/images/background-1.png",
+      image: "https://images.unsplash.com/photo-1699973000822-26b36df91f4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       caption: "Caption 3",
       description: "Description Here",
     },

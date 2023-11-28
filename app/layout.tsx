@@ -1,9 +1,8 @@
 import "@/app/styles/scss/style.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import Header from "@/components/layout/header";
-import FooterDark from "@/components/layout/footer-dark";
+import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Next.js + Sass + Bootstrap Template",
@@ -20,7 +19,7 @@ export default function DefaultLayout({
       <body>
         <Header />
         <main>{children}</main>
-        <FooterDark />
+        <Footer />
       </body>
     </html>
   );

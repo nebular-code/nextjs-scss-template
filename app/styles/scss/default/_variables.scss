@@ -1,12 +1,6 @@
 
 //===== Colors =====//
-$theme-color: #dba40c;
-$theme-color-2: #b39409;
-$theme-color-3: #f9aa00;
-// $theme-color: #f99500;
-// $theme-color-2: #fac32c;
-// $theme-color-3: #f98500;
-// $body-color: #1d1d24;
+$theme-color: rgb(131, 72, 242);
 $body-color: #0c0c0c;
 $body-color-2: #161616;
 $heading-color: #1f1f25;
@@ -19,10 +13,8 @@ $gray:#e5e5e5;
 =================================*/
 
 // Heading Font List
-
 $body-font: var(--font-inter); 
 $heading-font: var(--font-poppins);
-
 
 /*===============================
     Color Variation 
@@ -45,15 +37,21 @@ $h4: 20px;
 $h5: 18px;
 $h6: 16px;
 
+//===== Footer Variables =====//
+$footer-text-color: $gray;
+$footer-bg-color: $body-color;
+$footer-border-color: #4d4d4d;
+
 //===== Social Colors =====//
-$facebook : #3B5998;
-$twitter : #00ACEE;
-$google-plus : #DD4B39;
-$pinterest : #C8232C;
-$linkedin : #0E76A8;
-$flickr : #FF0084;
-$google : #dd4b39;
-$youtube : #cd201f;
+$facebook: #005fee;
+$twitter: #00ACEE;
+$google-plus: #DD4B39;
+$pinterest: #C8232C;
+$linkedin: #0E76A8;
+$flickr: #FF0084;
+$google: #dd4b39;
+$youtube: #cd201f;
+$instagram: #ff879d;
 
 // Layouts
 $smlg-device: 'only screen and (max-width: 1199px)';

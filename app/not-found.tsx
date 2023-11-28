@@ -3,7 +3,7 @@
 import PageHero from "@/components/elements/page-hero";
 import styles from "@/app/styles/scss/modules/_not-found.module.scss";
 import Link from "next/link";
-import FooterDark from "@/components/layout/footer-dark";
+import FooterDark from "@/components/layout/footer";
 
 export default function NotFound() {
   return (

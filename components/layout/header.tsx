@@ -12,7 +12,7 @@ type NavItem = {
 };
 
 export default function Header() {
-  const headerLogoHref = "/assets/images/logo-placeholder-image.png";
+  const headerLogoHref = "https://dieselpunkcore.com/wp-content/uploads/2014/06/logo-placeholder.png";
 
   const navItems: NavItem[] = [
     {
@@ -120,9 +120,7 @@ export default function Header() {
         <div className="header-left">
           <div className="logo">
             <a href="/">
-              <Image
-                width={50}
-                height={50}
+              <img
                 className="header-logo"
                 src={headerLogoHref}
                 alt="logo"

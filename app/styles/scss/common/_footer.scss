@@ -1,9 +1,15 @@
 /*--------------------
 Footer Styles 
 ----------------------*/
+.footer {
+    background-color: $footer-bg-color;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    color: $footer-text-color;
+}
+
 
 .footer-wrapper {
-    position: relative;
     width: 100%;
     padding-inline: 50px;
 
@@ -12,54 +18,14 @@ Footer Styles
     }
 }
 
-.footer-dark {
-    position: relative;
-    background-color: $body-color;
-    padding: 50px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @media #{$sm-layout} {
-        flex-direction: column;
-        padding: 30px 0;
-    }
-}
-
-.footer-title {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 20px;
-    color: $gray !important;
-
-    a {
-        color: $gray;
-
-        &:hover {
-            color: $theme-color-3 !important;
-        }   
-    }
-
-    @media #{$sm-layout} {
-        margin-bottom: 10px;
-        justify-content: center;
-    }
-
-    .footer-title-flag {
-        width: 30px;
-        height: 20px;
-        margin-left: 8px;
-        margin-top: 4px;
-    }
-}
 
 .footer-socials {
-    // border: 2px solid gray;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $footer-border-color;
 
     ul {
-        // border: 2px solid gray;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -70,29 +36,32 @@ Footer Styles
             justify-content: flex-end;
             margin-right: 6 0px;
         }
+
+        li {
+            list-style: none;
+            margin: 0 10px;
+
+            a {
+                color: $footer-text-color;
+                font-size: 18px;
+
+                &.socials-youtube:hover {
+                    color: $youtube;
+                }
+
+                &.socials-facebook:hover {
+                    color: $facebook;
+                }
+
+                &.socials-instagram:hover {
+                    color: $instagram;
+                }
+            }
+        }
     }
 }
 
-.footer-nebular {
-    display: flex;
-    justify-content: flex-end;
-    color: $gray !important;
-
-    a {
-        font-weight: 600;
-        color: $theme-color !important;
-
-        &:hover {
-            color: $theme-color-3 !important;
-        }
-    }
-
-    @media #{$sm-layout}, #{$md-layout} {
-        justify-content: center;
-
-    }
-
-    @media #{$md-layout} {
-        margin-top: 10px;
-    }
+.footer-nebularint {
+    font-weight: 600;
+    color: $theme-color;
 }

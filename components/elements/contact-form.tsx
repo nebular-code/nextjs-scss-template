@@ -34,6 +34,10 @@ export default function ContactForm() {
   const handleSubmit = async (values: any) => {
     setIsLoading(true);
 
+    await new Promise((r) => setTimeout(r, 1000));
+    setIsSubmitted(true);
+    return;
+
     const res = await fetch("/api/contact/send-message", {
       method: "POST",
       body: JSON.stringify(values),
@@ -41,8 +45,6 @@ export default function ContactForm() {
         "Content-Type": "application/json",
       },
     });
-
-    // const json = await res.json();
 
     if (!res.ok) {
       setIsLoading(false);
@@ -64,7 +66,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={formik.handleSubmit} className="w-full max-w-lg mx-auto">
+    <form onSubmit={formik.handleSubmit} className="w-full max-w-lg">
       <div className="mb-4">
         <label htmlFor="name" className=" ">
           Full Name
