@@ -1,22 +1,13 @@
-import styles from "@/app/styles/scss/modules/_layout.module.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/styles/scss/style.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import Header from "@/components/layout/header";
-
-export const inter = Inter({ subsets: ["latin"] });
-
-export const poppins = Poppins({
-  weight: ["700"],
-  subsets: ["latin"],
-  display: "swap",
-});
+import FooterDark from "@/components/layout/footer-dark";
 
 export const metadata: Metadata = {
-  title: "Elite Aces Basketball",
-  description:
-    "Elite Aces Basketball is a basketball organization based in Edmonton, Alberta, Canada. We provide basketball training camps as well as organize competitive basketball teams.",
+  title: "Next.js + Sass + Bootstrap Template",
+  description: "",
 };
 
 export default function DefaultLayout({
@@ -28,7 +19,8 @@ export default function DefaultLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className={styles.main}>{children}</main>
+        <main>{children}</main>
+        <FooterDark />
       </body>
     </html>
   );
