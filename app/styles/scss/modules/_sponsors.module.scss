@@ -1,0 +1,47 @@
+/// ========================== _sponsors.module.scss ================== ///
+/// This is the custom styles for the /sponsors page.
+/// =============================================================== ///
+
+@import '../default/variables'; 
+
+.pageContent {
+    padding-top: 100px;
+    padding-bottom: 300px;
+}
+
+.paragraph {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $body-color;
+    margin-bottom: 20px;
+}
+
+.header3 {
+    width: 100%;
+    text-align: center;
+}
+
+.sponsorWrapper {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+    a:hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.contactButton {
+    
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}

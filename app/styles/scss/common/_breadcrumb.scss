@@ -1,0 +1,51 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1260px;
+    }
+}
+
+.breadcrumb-wrapper {
+    padding-top: 170px;
+    padding-bottom: 10px;
+    background-color: $body-color;
+   
+    @media #{$sm-layout} {
+        padding-top: 100px;
+    }
+
+    @media #{$md-layout} {
+        padding-top: 190px;
+    }
+}
+
+.breadcrumb-inner {
+    &.active{
+        color: $theme-color;
+    }
+
+    text-align: left;
+   
+    ul, .items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            color: #fff;
+            a {
+                color: #fff;
+                outline: none !important;
+
+            }
+            &.active{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+

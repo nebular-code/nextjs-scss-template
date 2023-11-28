@@ -1,0 +1,67 @@
+/// ========================== _camps.module.scss ================== ///
+/// This is the custom styles for the /camps page.
+/// =============================================================== ///
+
+@import '../default/variables'; 
+
+.pageContent {
+    padding-block: 70px;
+}
+
+.paragraph {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $body-color;
+    margin-bottom: 20px;
+}
+
+.campCard {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: $gray;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .campCardIcon {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        width: 100px;
+        height: 100px;
+
+        @media #{$sm-layout} {
+            width: 50px;
+            height: 50px;
+            right: 5px;
+            top: 5px;
+        }
+    }
+}
+
+
+.campCardBody {
+    color: $body-color;
+    padding-block: 30px;
+}
+
+.campCardFooter {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+
+    // media queries
+    @media #{$sm-layout} {
+        flex-direction: column;
+    }
+}
+
+
+.link {
+    text-decoration: underline !important;
+    color: $theme-color !important;
+
+    
+}

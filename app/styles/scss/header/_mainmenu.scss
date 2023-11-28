@@ -1,0 +1,117 @@
+/*====================
+Mainmenu Area 
+=====================*/
+
+.mainmenunav {
+    ul {
+        &.mainmenu {
+
+            @media #{$md-layout}, #{$sm-layout} {
+                background-color: $body-color !important;
+            }
+
+            display: flex;
+            justify-content: flex-end;
+            @extend %liststyle;
+            flex-wrap: wrap;
+            > li {
+                margin: 0 15px;
+                position: relative;
+                > a {
+                    
+                    @extend %transition;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 20px 0;
+                    display: inline-block;
+                }
+                > ul {
+                    &.submenu {
+                        @extend %liststyle;
+                        min-width: 240px;
+                        height: auto;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 9999;
+                        opacity: 0;
+                        visibility: hidden;
+                        background-color: $white;
+                        box-shadow: 0 0 35px rgba(0,0,0,0.1);
+                        text-align: left;
+                        @extend %transition;
+                        padding: 12px 0;
+                        border-radius: 4px;
+                        li {
+                            position: relative;
+                            a {
+                                font-size: 16px;
+                                font-weight: 500;
+                                padding: 5px 20px;
+                                font-size: 14px;
+                                display: block;
+                                color: $white;
+                                margin: 0 10px;
+                                border-radius: 3px;
+                                @extend %transition;
+                            }
+                            &:hover {
+                                > a {
+                                    color: $theme-color;
+                                }
+                            }
+
+                            .submenu {
+                                @extend %liststyle;
+                                min-width: 240px;
+                                height: auto;
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                z-index: 90;
+                                opacity: 0;
+                                visibility: hidden;
+                                background-color: #fff;
+                                box-shadow: 0 0 35px rgba(0,0,0,0.1);
+                                text-align: left;
+                                @extend %transition;
+                                padding: 12px 0;
+                                border-radius: 4px;
+                            }
+
+                            &:hover {
+                                .submenu {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                &:hover {
+                    > ul {
+                        &.submenu {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        color: $theme-color;
+                    }
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+

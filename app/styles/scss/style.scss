@@ -1,0 +1,76 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+/**************************************
+    Default Styles
+***************************************/
+@import 'default/variables';
+@import 'default/global';
+@import 'default/typography';
+@import 'default/mixins';
+@import 'default/reset';
+@import 'default/extend';
+@import 'default/animations';
+@import 'default/shortcode';
+@import 'default/spacing';
+
+/**************************************
+    Header Styles
+***************************************/
+
+@import 'header/header';
+@import 'header/mainmenu';
+
+/**************************************
+    Inner Styles
+***************************************/
+
+@import 'common/breadcrumb';
+@import 'common/section-title';
+@import 'common/button';
+@import 'common/pagination';
+@import 'common/socialicon';
+@import 'common/footer';
+
+/**************************************
+    Elements Styles
+***************************************/
+
+// @import 'elements/portfolio';
+// @import 'elements/service';
+// @import 'elements/slider';
+// @import 'elements/counterup';
+// @import 'elements/testimonial';
+// @import 'elements/brand';
+// @import 'elements/team';
+// @import 'elements/callto-action';
+// @import 'elements/tab';
+// @import 'elements/accordion';
+// @import 'elements/list';
+// @import 'elements/contact';
+// @import 'elements/progress';
+// @import 'elements/column';
+// @import 'elements/404';
+// @import 'elements/pricing';
+
+
+
+/**************************************
+    Blog Styles
+***************************************/
+
+// @import 'blog/blog';
+// @import 'blog/blog-details';
+
+
+
+/**************************************
+    Template Styles
+***************************************/
+
+// @import 'template/about';
+// @import 'template/portfolio-details';
+// @import 'template/service-details';
+// @import 'template/dark-version';
+// @import 'template/preview';

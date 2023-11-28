@@ -1,0 +1,16 @@
+// document styles
+html {
+    font-family: $body-font;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+// set default background color
+html, main {
+    background-color: $body-color;
+}
+
+.link {
+    text-decoration: underline !important;
+    color: $theme-color !important;
+}

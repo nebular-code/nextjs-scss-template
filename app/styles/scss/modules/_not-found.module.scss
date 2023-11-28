@@ -1,0 +1,13 @@
+/// ========================== _not-found.module.scss ================== ///
+/// This is the custom styles for the not-found (404) page.
+/// ==================================================================== ///
+
+@import '../default/variables'; 
+
+.wrapper {
+    height: 60vh;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
