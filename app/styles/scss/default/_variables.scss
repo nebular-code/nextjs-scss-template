@@ -7,6 +7,7 @@ $heading-color: #1f1f25;
 $border-color: #d4d4d4;
 $white:#ededed;
 $gray:#e5e5e5;
+$black: #000;
 
 /*===============================
     Font Family 
@@ -25,6 +26,8 @@ $color-3:  #2f21b3;
 $color-4:  #8956e2;
 $colorList: $color-1, $color-2 ,$color-3 ,$color-4;
 
+//===== Border Radius =====//
+$button-border-radius: 8px;
 
 //===== Line Height =====//
 $body-line-height: 1.714286;
@@ -38,9 +41,9 @@ $h5: 18px;
 $h6: 16px;
 
 //===== Footer Variables =====//
-$footer-text-color: $gray;
-$footer-bg-color: $body-color;
-$footer-border-color: #4d4d4d;
+$footer-text-color: $body-color;
+$footer-bg-color: #fff;
+$footer-border-color: $gray;
 
 //===== Social Colors =====//
 $facebook: #005fee;

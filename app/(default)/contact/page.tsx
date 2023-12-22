@@ -1,12 +1,6 @@
-import PageHero from "@/components/elements/page-hero";
-import styles from "@/app/styles/scss/modules/_contact.module.scss";
-import FooterDark from "@/components/layout/footer";
-
-import { BsFillEnvelopeAtFill } from "react-icons/bs";
-import Image from "next/image";
-import ContactForm from "@/components/elements/contact-form";
+import PageHero from "@/components/elements/page-breadcrumb";
+import ContactForm from "@/components/forms/contact-form";
 import { BreadcrumbData } from "@/lib/types";
-import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -32,7 +26,7 @@ export default function Contact() {
           <div className="col-lg-5">
             <ContactForm />
           </div>
-          <div className="col-lg-7">
+          <div className="col-lg-7 mt-5 mt-lg-0">
             <div className="card rounded-0">
               <div className="card-body">
                 <h5 className="card-title">Hello World!</h5>
@@ -41,7 +35,7 @@ export default function Contact() {
                   Temporibus ipsa corporis animi neque! Ratione, autem.
                 </p>
                 <a href="#" className="btn btn-primary">
-                  Go somewhere
+                  Go somewhere 
                 </a>
               </div>
             </div>

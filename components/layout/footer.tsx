@@ -25,12 +25,14 @@ export default function Footer() {
       <div className="footer-wrapper">
         <div className="row mb-4">
           <div className="col-lg-3">
-            <img
-              src="https://dieselpunkcore.com/wp-content/uploads/2014/06/logo-placeholder.png"
-              alt="logo"
-              width={100}
-              className="mb-5 mb-lg-0"
-            />
+            <a href="/">
+              <img
+                src="https://dieselpunkcore.com/wp-content/uploads/2014/06/logo-placeholder.png"
+                alt="logo"
+                width={100}
+                className="mb-5 mb-lg-0"
+              />
+            </a>
           </div>
           <div className="col-lg-3">
             <h4>Company</h4>
@@ -93,13 +95,7 @@ export default function Footer() {
 
           <div className="col-sm-6">
             <p className="text-center text-sm-end">
-              Created by{" "}
-              <a
-                className="footer-nebularint"
-                href="https://nebularinteractive.com"
-              >
-                nebularinteractive.com
-              </a>{" "}
+              Place a link <a href="#">here</a>
             </p>
           </div>
         </div>

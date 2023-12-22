@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { BiSolidChevronDown } from "react-icons/bi";
 import { FiMenu, FiX } from "react-icons/fi";
+import { appConfig } from "@/app/app-config";
 
 type NavItem = {
   title: string;
@@ -12,7 +12,7 @@ type NavItem = {
 };
 
 export default function Header() {
-  const headerLogoHref = "https://dieselpunkcore.com/wp-content/uploads/2014/06/logo-placeholder.png";
+  const headerLogoHref = appConfig.logoUrl;
 
   const navItems: NavItem[] = [
     {
@@ -112,10 +112,7 @@ export default function Header() {
 
   return (
     <header className="header header-backdrop formobile-menu">
-      <div
-        onClick={() => closeMobileMenu()}
-        className="header-backdrop-overlay"
-      ></div>
+      <div onClick={() => closeMobileMenu()} className="header-backdrop-overlay"></div>
       <div className="header-wrapper" id="header-wrapper">
         <div className="header-left">
           <div className="logo">
@@ -133,7 +130,7 @@ export default function Header() {
             {renderNavItems(navItems)}
           </nav>
           <div className="header-btn">
-            <a className="rn-btn" href="/contact">
+            <a className="theme-btn-fill" href="/contact">
               <span>CONTACT US</span>
             </a>
           </div>

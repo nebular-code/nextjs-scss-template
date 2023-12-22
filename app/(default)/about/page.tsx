@@ -1,6 +1,5 @@
-import PageHero from "@/components/elements/page-hero";
+import PageHero from "@/components/elements/page-breadcrumb";
 import { BreadcrumbData } from "@/lib/types";
-import Link from "next/link";
 
 export default function About() {
   return (

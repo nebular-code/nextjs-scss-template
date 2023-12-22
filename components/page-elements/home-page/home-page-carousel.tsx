@@ -7,23 +7,23 @@ import Carousel from "react-bootstrap/Carousel";
 export function HomePageCarousel() {
   const data = [
     {
-      image: "https://images.unsplash.com/photo-1701077136756-3b8439292118?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      caption: "Caption",
-      description: "Description Here",
+      image: "/images/trees.jpg",
+      caption: "This Carousel is from the react-bootstrap library",
+      description: "It takes up half of the screen height (50vh)",
     },
     {
-      image: "https://images.unsplash.com/photo-1682686578842-00ba49b0a71a?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/images/trees.jpg",
       caption: "Caption 2",
       description: "Description Here",
     },
     {
-      image: "https://images.unsplash.com/photo-1699973000822-26b36df91f4f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "/images/trees.jpg",
       caption: "Caption 3",
       description: "Description Here",
     },
   ];
 
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState<number>(0);
   const handleSelect = (selectedIndex: number, e: any) => {
     setIndex(selectedIndex);
   };
@@ -32,11 +32,11 @@ export function HomePageCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {data.map((slide, i) => {
         return (
-          <Carousel.Item key={i}>
+          <Carousel.Item key={i} className="carousel-item-dimensions">
             <img
-              className="d-block w-100"
+              className=""
               src={slide.image}
-              alt="slider image"
+              alt={slide.caption}
             />
             <Carousel.Caption>
               <h3 className="text-white">{slide.caption}</h3>

@@ -1,35 +1,30 @@
 "use client";
 
-import PageHero from "@/components/elements/page-hero";
-import styles from "@/app/styles/scss/modules/_not-found.module.scss";
 import Link from "next/link";
-import FooterDark from "@/components/layout/footer";
 
 export default function NotFound() {
   return (
     <>
-      <PageHero />
-      <div className={styles.wrapper}>
-        <h3 className="text-center">404 | Not Found</h3>
-        <p className="text-center">
-          Whoops, we couldn&apos;t find the page you&apos;re looking for...{" "}
+      <div className="container page-404">
+        <h1>404</h1>
+        <p>
+          Whoops, we couldn&apos;t find the page you&apos;re looking for...
         </p>
-        <div className="d-flex">
+
+        <div className="buttons-container">
           <button
             onClick={() => {
               window.history.back();
             }}
-            className="rn-btn-fill mr-2"
+            className="theme-btn-fill"
           >
             Go Back
           </button>
-          <button className="rn-btn">
-            <Link href={"/"}>Go to homepage</Link>
-          </button>
+          <>
+            <Link className="theme-btn" href={"/"}>Go to homepage</Link>
+          </>
         </div>
       </div>
-
-      <FooterDark />
     </>
   );
 }

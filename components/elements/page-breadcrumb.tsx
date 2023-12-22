@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { BreadcrumbData } from "@/lib/types";
 
-export default function PageHero({
+export default function PageBreadcrumb({
   breadcrumbs,
 }: {
   breadcrumbs?: BreadcrumbData[];

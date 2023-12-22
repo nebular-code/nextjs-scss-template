@@ -1,0 +1,44 @@
+.page-404 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+        font-size: 200px;
+        font-weight: 700;
+        color: $theme-color;
+        margin: 0;
+        line-height: 1;
+        opacity: .5;
+
+        @media #{$md-layout} { font-size: 150px }
+        @media #{$sm-layout} { font-size: 100px }
+    }
+  
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: $theme-color;
+        margin: 0;
+        line-height: 1;
+
+        @media #{$sm-layout} { padding-inline: 20px }
+    }
+
+    .buttons-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        @media #{$sm-layout} { 
+            margin-top: 20px;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+   
+}

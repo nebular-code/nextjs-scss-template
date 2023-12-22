@@ -1,6 +1,7 @@
 /**************************************
     Default Styles
 ***************************************/
+
 @import 'default/variables';
 @import 'default/global';
 @import 'default/typography';
@@ -9,21 +10,20 @@
 @import 'default/animations';
 @import 'default/shortcode';
 @import 'default/spacing';
+@import 'default/404';
 
 /**************************************
-    Header Styles
+    Header / Footer Styles
 ***************************************/
 
-@import 'header/header';
-@import 'header/mainmenu';
+@import 'layout/header';
+@import 'layout/mainmenu';
+@import 'layout/footer';
 
 /**************************************
-    Inner Styles
+Elements
 ***************************************/
-
-@import 'common/breadcrumb';
-@import 'common/section-title';
-@import 'common/button';
-@import 'common/pagination';
-@import 'common/socialicon';
-@import 'common/footer';
+@import 'elements/breadcrumb';
+@import 'elements/button';
+@import 'elements/socialicon';
+@import 'elements/carousel';

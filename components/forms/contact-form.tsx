@@ -144,7 +144,9 @@ export default function ContactForm() {
       </div>
 
       <button type="submit" className="rn-btn-fill">
-        {isLoading ? "Sending..." : "Send"}
+        {isLoading ? 
+          "Sending..." : 
+          <>Send Message <BsFillSendFill /></>}
       </button>
     </form>
   );
