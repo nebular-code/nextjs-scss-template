@@ -6,7 +6,7 @@ import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Next.js + Sass + Bootstrap Template",
-  description: "",
+  description: "Next.js + Sass + Bootstrap Template",
 };
 
 export default function DefaultLayout({
