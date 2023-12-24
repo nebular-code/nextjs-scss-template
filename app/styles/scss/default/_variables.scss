@@ -40,6 +40,39 @@ $h4: 20px;
 $h5: 18px;
 $h6: 16px;
 
+//===== Header Variables =====//
+$header-position: block; // block or absolute
+$header-bg-color: #fff;
+$header-border-bottom: 1px solid $gray;
+$header-submenu-bg-color: #fff;
+
+// LOGO
+$header-logo-width: 80px;
+$header-logo-height: auto;
+
+// NAV TEXT COLOR
+$header-nav-text-color: black;
+$header-nav-text-color-hover: $theme-color;
+
+
+$header-mobile-bg-color: white;
+$header-mobile-text-color: $black;
+
+// BOTTOM BORDER
+$header-border-bottom: 1px solid $gray;
+
+// ICON COLORS
+$header-chevron-icon-color: black;
+$header-hamburger-color: $theme-color;
+$header-hamburger-hover-color: $theme-color;
+$header-close-button-color: black;
+$header-close-button-hover-color: $theme-color;
+
+
+
+
+
+
 //===== Footer Variables =====//
 $footer-text-color: $body-color;
 $footer-bg-color: #fff;

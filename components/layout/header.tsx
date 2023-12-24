@@ -47,17 +47,21 @@ export default function Header() {
     },
   ];
 
+  // on page resize, close mobile menu
+  window.addEventListener("resize", () => {
+      closeMobileMenu();
+  });
+
   const openMobileMenu = () => {
-    document.querySelector(".header-wrapper")!.classList.toggle("menu-open");
+    document.querySelector(".mainmenu")!.classList.toggle("active");
     document.querySelector(".header-backdrop-overlay")!.classList.add("active");
+    document.querySelector(".close-menu")!.classList.add("active");
   };
 
   const closeMobileMenu = () => {
-    document.querySelector(".header-wrapper")!.classList.remove("menu-open");
-    document
-      .querySelector(".header-backdrop-overlay")!
-      .classList.remove("active");
-
+    document.querySelector(".mainmenu")!.classList.remove("active");
+    document.querySelector(".header-backdrop-overlay")!.classList.remove("active");
+    document.querySelector(".close-menu")!.classList.remove("active");
     document.querySelector(".submenu")!.classList.remove("active");
   };
 
@@ -66,59 +70,60 @@ export default function Header() {
     document.getElementById(elementId)!.classList.toggle("active");
   };
 
-  const renderNavItems = (navItems: NavItem[]) => {
+  const renderNavItems = (navItems: NavItem[]): any => {
     return (
-      <ul className="mainmenu">
-        {navItems.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className={item.submenu ? "has-dropdown" : undefined}
-            >
-              <Link onClick={closeMobileMenu} href={item.href}>
-                {item.title}
-              </Link>
-              {item.submenu && (
-                <span onClick={() => toggleActive(`${item.href}Submenu`)}>
-                  <BiSolidChevronDown />
-                </span>
-              )}
+        <ul className="mainmenu">
+          {navItems.map((item, index) => {
+            return (
+              <li
+                key={index}
+                className={item.submenu ? "has-submenu" : undefined}
+              >
+                <Link onClick={closeMobileMenu} href={item.href}>
+                  {item.title}
+                </Link>
+                {item.submenu && (
+                  <span onClick={() => toggleActive(`${item.href}Submenu`)}>
+                    <BiSolidChevronDown />
+                  </span>
+                )}
 
-              {item.submenu && (
-                <ul className="submenu" id={`${item.href}Submenu`}>
-                  {item.submenu.map((subItem, index) => {
-                    return (
-                      <li key={index}>
-                        <Link
-                          onClick={() => {
-                            toggleActive(`${item.href}Submenu`);
-                            closeMobileMenu();
-                          }}
-                          href={subItem.href}
-                        >
-                          {subItem.title}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+                {item.submenu && (
+                  <ul className="submenu" id={`${item.href}Submenu`}>
+                    {item.submenu.map((subItem, index) => {
+                      return (
+                        <li key={index}>
+                          <Link
+                            onClick={() => {
+                              toggleActive(`${item.href}Submenu`);
+                              closeMobileMenu();
+                            }}
+                            href={subItem.href}
+                          >
+                            {subItem.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+        </ul>
     );
   };
 
   return (
-    <header className="header header-backdrop formobile-menu">
+    <header className="header header-backdrop">
+
       <div onClick={() => closeMobileMenu()} className="header-backdrop-overlay"></div>
+
       <div className="header-wrapper" id="header-wrapper">
         <div className="header-left">
-          <div className="logo">
+          <div className="logo-wrapper">
             <a href="/">
               <img
-                className="header-logo"
                 src={headerLogoHref}
                 alt="logo"
               />
@@ -126,23 +131,21 @@ export default function Header() {
           </div>
         </div>
         <div className="header-right">
-          <nav className="mainmenunav d-lg-block">
+          <nav>
             {renderNavItems(navItems)}
           </nav>
           <div className="header-btn">
-            <a className="theme-btn-fill" href="/contact">
-              <span>CONTACT US</span>
+            <a className="btn-theme btn-theme-primary" href="/contact">
+              Contact Us
             </a>
           </div>
           {/* Open button */}
-          <div className="hamburger-menu d-block d-lg-none pl--20">
-            <span onClick={openMobileMenu} className="menutrigger text-white">
-              <FiMenu />
-            </span>
+          <div onClick={openMobileMenu} className="hamburger-menu">
+            <FiMenu />
           </div>
           {/* Close button */}
-          <div className="close-menu d-block d-lg-none">
-            <span onClick={closeMobileMenu} className="closeTrigger">
+          <div className="close-menu">
+            <span onClick={closeMobileMenu}>
               <FiX />
             </span>
           </div>
